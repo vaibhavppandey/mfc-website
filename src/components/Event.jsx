@@ -44,6 +44,10 @@ export const Event = () => {
           </Select>
         </FormControl>
       </div>
+
+      <div className="carousel">
+
+      </div>
     </div>
   );
 };
