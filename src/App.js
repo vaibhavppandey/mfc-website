@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import OnePage from "./pages/OnePage";
 import { useEffect } from "react";
+import { EventsPage } from "./pages/EventsPage";
 
 function App() {
   const action = useNavigationType();
@@ -46,6 +47,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<OnePage />} />
+      <Route path="/events" element={<EventsPage />} />
     </Routes>
   );
 }
