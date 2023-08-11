@@ -45,9 +45,7 @@ export const Event = () => {
         </FormControl>
       </div>
 
-      <div className="carousel">
-
-      </div>
+      <div className="carousel"></div>
     </div>
   );
 };

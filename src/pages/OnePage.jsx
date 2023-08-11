@@ -244,7 +244,7 @@ const OnePage = () => {
                   />
                 </div>
               </div>
-            </div>            
+            </div>
             <div className="absolute top-[5.77rem] left-[calc(50%_-_295.97px)] text-[0.91rem] tracking-[0.91px] leading-[1.59rem] capitalize font-light text-white inline-block w-[36.67rem] h-[5.18rem]">
               <p className="m-0">
                 MFC VIT boasts a wide array of successful events conducted
