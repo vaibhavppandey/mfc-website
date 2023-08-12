@@ -3,7 +3,24 @@ import { useState } from "react";
 import styles from "./event.module.css";
 
 export const Event = () => {
+  const slides = [
+    "slide-image@2x.png",
+    "rectangle-3014@2x.png",
+    "slide-image1@2x.png",
+  ];
+
   const [year, setYear] = useState("2023");
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const nextSlide = () => {
+    if (slideIndex === slides.length - 1) setSlideIndex(0);
+    else setSlideIndex(slideIndex + 1);
+  };
+
+  const prevSlide = () => {
+    if (slideIndex === 0) setSlideIndex(slides.length - 1);
+    else setSlideIndex(slideIndex - 1);
+  };
 
   const handleChange = (event) => {
     setYear(event.target.value);
@@ -12,10 +29,10 @@ export const Event = () => {
   return (
     <div className={styles.event}>
       <div className={styles.heading}>
-        <h1 style={{ color: "#ffbc59" }}>Events</h1>
+        <h1 className="text-goldenrod text-center">Events</h1>
       </div>
 
-      <div className={styles.about}>
+      <div className="text-center mt-4">
         <p>
           MFC VIT Boasts A Wide Array Of Successful Events Conducted Throughout
         </p>
@@ -23,17 +40,15 @@ export const Event = () => {
         <p>Competitive Coding Events, And Many More.</p>
       </div>
 
-      <div className={styles.year}>
+      <div className="text-center mt-4">
         <FormControl>
           <InputLabel id="year-select-label">Year</InputLabel>
           <Select
+            className="bg-orange"
             labelId="year-select-label"
             id="year-select"
             value={year}
             onChange={handleChange}
-            style={{
-              backgroundColor: "#ff6a00",
-            }}
           >
             <MenuItem value={2018}>2018</MenuItem>
             <MenuItem value={2019}>2019</MenuItem>
@@ -45,8 +60,29 @@ export const Event = () => {
         </FormControl>
       </div>
 
-      <div className="carousel">
+      <div className={styles.carousel}>
+        <div className={`${styles["slideshow-container"]}`}>
+          <div className={styles.slide}>
+            <div className={styles.numbertext}>
+              {slideIndex} / {slides.length}
+            </div>
+            <img src={slides[slideIndex + 0]} />
+            <div className={styles.text}>Caption Text</div>
+          </div>
 
+          <a className={styles.prev} onClick={prevSlide}>
+            {"<"}
+          </a>
+          <a className={styles.next} onClick={nextSlide}>
+            {">"}
+          </a>
+        </div>
+
+        {/* <div className={`${styles["nav"]} text-center`}>
+          <span className={styles.dot} onClick={() => {}}></span>
+          <span className={styles.dot} onClick={() => {}}></span>
+          <span className={styles.dot} onClick={() => {}}></span>
+        </div> */}
       </div>
     </div>
   );

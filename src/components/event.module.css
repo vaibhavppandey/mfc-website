@@ -1,0 +1,87 @@
+.event {
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.event .carousel {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.event .carousel .slideshow-container {
+    /* max-width: 750px; */
+    position: relative;
+    margin: auto;
+}
+
+.event .carousel .slideshow-container img {
+    /* width: 1000px; */
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.event .carousel .slideshow-container .prev,
+.event .carousel .slideshow-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    /* margin-top: -22px; */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.event .carousel .slideshow-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.event .carousel .slideshow-container .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.event .carousel .slideshow-container .prev:hover,
+.event .carousel .slideshow-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.event .carousel .slideshow-container .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.event .carousel .slideshow-container .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.event .carousel .nav .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.event .carousel .nav .active,
+.event .carousel .nav .dot:hover {
+    background-color: #717171;
+}
