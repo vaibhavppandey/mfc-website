@@ -1,3 +1,5 @@
+import React from "react";
+
 const OnePage = () => {
   return (
     <div className="relative bg-gray-200 w-full overflow-hidden flex flex-col items-center justify-start gap-[7.69rem] text-left text-[0.81rem] text-white font-raleway">
