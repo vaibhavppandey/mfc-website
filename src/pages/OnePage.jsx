@@ -1,3 +1,5 @@
+import React from "react";
+
 const OnePage = () => {
   return (
     <div className="relative bg-gray-200 w-full overflow-hidden flex flex-col items-center justify-start gap-[7.69rem] text-left text-[0.81rem] text-white font-raleway">
@@ -244,7 +246,7 @@ const OnePage = () => {
                   />
                 </div>
               </div>
-            </div>            
+            </div>
             <div className="absolute top-[5.77rem] left-[calc(50%_-_295.97px)] text-[0.91rem] tracking-[0.91px] leading-[1.59rem] capitalize font-light text-white inline-block w-[36.67rem] h-[5.18rem]">
               <p className="m-0">
                 MFC VIT boasts a wide array of successful events conducted

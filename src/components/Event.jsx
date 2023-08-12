@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./event.module.css";
 
 export const Event = () => {
