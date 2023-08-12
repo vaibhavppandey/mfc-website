@@ -5,7 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import OnePage from "./pages/OnePage";
-import { useEffect } from "react";
+import React ,{ useEffect } from "react";
 import { EventsPage } from "./pages/EventsPage";
 
 function App() {
@@ -38,9 +38,9 @@ function App() {
       const metaDescriptionTag = document.querySelector(
         'head > meta[name="description"]'
       );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
+      // if (metaDescriptionTag) {
+      //  metaDescriptionTag.content = metaDescription;
+      // }
     }
   }, [pathname]);
 

@@ -1,13 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  scripts: {
+    dev: "vite", // start dev server
+    build: "vite build", // build for production
+    serve: "vite preview", // locally preview production build
+  },
   theme: {
     extend: {
       colors: {
         gray: {
-          "100": "#240d09",
-          "200": "#0c0a10",
-          "300": "rgba(255, 255, 255, 0.3)",
+          100: "#240d09",
+          200: "#0c0a10",
+          300: "rgba(255, 255, 255, 0.3)",
         },
         goldenrod: "#ffbc59",
         black: "#000",

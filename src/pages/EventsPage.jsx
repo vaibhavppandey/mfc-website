@@ -5,5 +5,5 @@ export const EventsPage = () => {
     <div className="h-screen">
       <Event />
     </div>
-  )
+  );
 };
