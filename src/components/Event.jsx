@@ -61,14 +61,17 @@ export const Event = () => {
       <div className={styles.carousel}>
         <p className={styles.slide_count}>{slideIndex + 1} / {slides.length}</p>
         <div className={styles.content}>
-        <p className={styles.prev_slide} onClick={prevSlide}>
-          {"<"}
-        </p>
+          <p className={styles.prev_slide} onClick={prevSlide}>
+            {"<"}
+          </p>
           <img className={styles.col_1} src={slides[slideIndex + 0]} />
-          <p className={styles.col_2}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa, quae molestiae maxime culpa unde aliquam velit, dolore dicta cupiditate odio. Accusantium nihil quam aliquam reprehenderit officia iusto ducimus nesciunt.</p>
+          <div className={styles.col_2}>
+            <h1>Event Name</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa, quae molestiae maxime culpa unde aliquam velit, dolore dicta cupiditate odio. Accusantium nihil quam aliquam reprehenderit officia iusto ducimus nesciunt.</p>
+          </div>
           <p className={styles.next_slide} onClick={nextSlide}>
-          {">"}
-        </p>
+            {">"}
+          </p>
         </div>
         <Button className={styles.register}>Register for Event</Button>
       </div>
