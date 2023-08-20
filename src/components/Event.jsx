@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Button, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React, { useState } from "react";
 import styles from "./event.module.css";
 
@@ -6,7 +6,7 @@ export const Event = () => {
   const slides = [
     "slide-image@2x.png",
     "rectangle-3014@2x.png",
-    "slide-image1@2x.png",
+    "rectangle-36@2x.png",
   ];
 
   const [year, setYear] = useState("2023");
@@ -27,12 +27,10 @@ export const Event = () => {
   };
 
   return (
-    <div className={styles.event}>
-      <div className={styles.heading}>
-        <h1 className="text-goldenrod text-center">Events</h1>
-      </div>
+    <div className={styles.events}>
+      <h1 className={styles.heading}>Events</h1>
 
-      <div className="text-center mt-4">
+      <div className={styles.about}>
         <p>
           MFC VIT Boasts A Wide Array Of Successful Events Conducted Throughout
         </p>
@@ -40,7 +38,7 @@ export const Event = () => {
         <p>Competitive Coding Events, And Many More.</p>
       </div>
 
-      <div className="text-center mt-4">
+      <div className={styles.year_select}>
         <FormControl>
           <InputLabel id="year-select-label">Year</InputLabel>
           <Select
@@ -61,28 +59,21 @@ export const Event = () => {
       </div>
 
       <div className={styles.carousel}>
-        <div className={`${styles["slideshow-container"]}`}>
-          <div className={styles.slide}>
-            <div className={styles.numbertext}>
-              {slideIndex} / {slides.length}
-            </div>
-            <img src={slides[slideIndex + 0]} />
-            <div className={styles.text}>Caption Text</div>
-          </div>
-
-          <a className={styles.prev} onClick={prevSlide}>
+        <p className={styles.slide_count}>{slideIndex + 1} / {slides.length}</p>
+        <div className={styles.content}>
+          <p className={styles.prev_slide} onClick={prevSlide}>
             {"<"}
-          </a>
-          <a className={styles.next} onClick={nextSlide}>
+          </p>
+          <img className={styles.col_1} src={slides[slideIndex + 0]} />
+          <div className={styles.col_2}>
+            <h1>Event Name</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa, quae molestiae maxime culpa unde aliquam velit, dolore dicta cupiditate odio. Accusantium nihil quam aliquam reprehenderit officia iusto ducimus nesciunt.</p>
+          </div>
+          <p className={styles.next_slide} onClick={nextSlide}>
             {">"}
-          </a>
+          </p>
         </div>
-
-        {/* <div className={`${styles["nav"]} text-center`}>
-          <span className={styles.dot} onClick={() => {}}></span>
-          <span className={styles.dot} onClick={() => {}}></span>
-          <span className={styles.dot} onClick={() => {}}></span>
-        </div> */}
+        <Button className={styles.register}>Register for Event</Button>
       </div>
     </div>
   );
