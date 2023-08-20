@@ -1,90 +1,68 @@
-/* Event Styling */
-.event {
+.events {
     height: 100vh;
-    background-color: #222; 
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Arial', sans-serif; 
+    overflow: hidden;
 }
 
-/* Slideshow Container Styling */
-.event .carousel .slideshow-container {
-    max-width: 800px; /* Increase max-width for a larger carousel */
-    position: relative;
-    margin: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
-    border-radius: 10px;
-    overflow: hidden; /* Hide overflow content */
-}
-
-/* Slideshow Image Styling */
-.event .carousel .slideshow-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Maintain image aspect ratio */
-}
-
-/* Navigation Styling */
-.event .carousel .slideshow-container .prev,
-.event .carousel .slideshow-container .next {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 12px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    font-size: 20px;
-    color: #fff;
-    border: none; 
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.event .carousel .slideshow-container .next {
-    right: 0;
-    border-radius: 0 8px 8px 0;
-}
-
-.event .carousel .slideshow-container .prev {
-    left: 0;
-    border-radius: 8px 0 0 8px;
-}
-
-.event .carousel .slideshow-container .prev:hover,
-.event .carousel .slideshow-container .next:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Caption Styling */
-.event .carousel .slideshow-container .text,
-.event .carousel .slideshow-container .numbertext {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    font-size: 16px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 12px;
-    width: 100%;
+.events .heading,
+.events .about,
+.events .year_select {
     text-align: center;
-    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+    margin-top: 12px;
 }
 
-/* Pagination Dots Styling */
-.event .carousel .nav .dot {
-    background-color: #999; /* Slightly darker dots */
-    border-radius: 50%;
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    transition: background-color 0.3s ease;
+.events .carousel {
+    background-color: yellow;
+    max-width: 80vw;
+    margin: auto;
+    margin-top: 12px;
 }
 
-.event .carousel .nav .active,
-.event .carousel .nav .dot:hover {
-    background-color: #fff;
+.events .carousel .slide_count {
+    background-color: #ccc;
+    text-align: center;
 }
 
+.events .carousel .next_slide,
+.events .carousel .prev_slide {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px;
+    position: absolute;
+    /* transform: translateY(-50%); */
+    top: 50%;
+}
+
+.events .carousel .prev_slide {
+    left: 0;
+}
+
+.events .carousel .next_slide {
+    right: 0;
+}
+
+.events .carousel .content {
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.events .carousel .content .col_1,
+.events .carousel .content .col_2 {
+    flex-basis: 50%;
+}
+
+
+.events .carousel .content .col_1 {
+    background-color: blue;
+    max-width: 50%;
+    object-fit: contain;
+}
+
+.events .carousel .content .col_2 {
+    background-color: green;
+    text-align: center;
+}
+
+.events .carousel .register {
+    background-color: orange;
+}
