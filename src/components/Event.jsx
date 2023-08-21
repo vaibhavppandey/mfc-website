@@ -1,12 +1,41 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { ThemeProvider, createTheme, FormControl, MenuItem, Select, Typography, Card, CardContent } from "@mui/material";
+import CssBaseline from '@mui/material/CssBaseline';
 import React, { useState } from "react";
-import styles from "./event.module.css";
 
-export const Event = () => {
+function EventCard({ title, body }) {
+  return (
+    <Card
+      sx={{ bgcolor: 'transparent', height: '12rem', width: '28rem', borderRadius: '24px' }}       
+      className="rounded-lg w-100"
+      raised
+    >
+      <CardContent className="h-full flex rounded w-100 bg-gradient-to-b from-amber-600 to-amber-400 items-center">
+        <img
+          src="/image-38@2x.png"
+          alt="Event"
+          className="w-32 h-32 mr-4"
+        />
+        <div className="flex-1 flex flex-col">
+          <Typography variant="h3">
+            {title}
+          </Typography>
+          <Typography variant="body2">
+            {body}
+          </Typography>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+
+
+export default function Event() {
   const slides = [
-    "slide-image@2x.png",
-    "rectangle-3014@2x.png",
-    "slide-image1@2x.png",
+    "image-38@2x.png",
+    "image-381@2x.png",
+    "image-382@2x.png",
+    "image-383@2x.png",
+    "image-384@2x.png",
   ];
 
   const [year, setYear] = useState("2023");
@@ -26,64 +55,76 @@ export const Event = () => {
     setYear(event.target.value);
   };
 
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
   return (
-    <div className={styles.event}>
-      <div className={styles.heading}>
-        <h1 className="text-goldenrod text-center">Events</h1>
-      </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <div className="h-screen m-4 flex flex-col justify-center items-center">
+        <Typography className="bg-gradient-to-t from-purple-600 to-amber-600 bg-clip-text text-transparent" variant="h3">Check out the Events at MFC</Typography>
 
-      <div className="text-center mt-4">
-        <p>
-          MFC VIT Boasts A Wide Array Of Successful Events Conducted Throughout
-        </p>
-        <p>The Year Including Speaker Sessions With Renowned Technocrats,</p>
-        <p>Competitive Coding Events, And Many More.</p>
-      </div>
-
-      <div className="text-center mt-4">
-        <FormControl>
-          <InputLabel id="year-select-label">Year</InputLabel>
-          <Select
-            className="bg-orange"
-            labelId="year-select-label"
-            id="year-select"
-            value={year}
-            onChange={handleChange}
-          >
-            <MenuItem value={2018}>2018</MenuItem>
-            <MenuItem value={2019}>2019</MenuItem>
-            <MenuItem value={2020}>2020</MenuItem>
-            <MenuItem value={2021}>2021</MenuItem>
-            <MenuItem value={2022}>2022</MenuItem>
-            <MenuItem value={2023}>2023</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-
-      <div className={styles.carousel}>
-        <div className={`${styles["slideshow-container"]}`}>
-          <div className={styles.slide}>
-            <div className={styles.numbertext}>
-              {slideIndex} / {slides.length}
-            </div>
-            <img src={slides[slideIndex + 0]} />
-            <div className={styles.text}>Caption Text</div>
-          </div>
-
-          <a className={styles.prev} onClick={prevSlide}>
-            {"<"}
-          </a>
-          <a className={styles.next} onClick={nextSlide}>
-            {">"}
-          </a>
+        <div className="text-center mt-4">
+          <Typography variant="body2">
+            MFC VIT Boasts a wide array of successful events conducted throughout<br />
+            the year including speaker sessions with renowned technocrats,<br />
+            competitive coding events, and many more.
+          </Typography>
         </div>
 
-        {/* <div className={`${styles["nav"]} text-center`}>
+        <div className="text-center mt-4">
+          <FormControl sx={{ width: '250px' }}>
+            <Select
+              className="bg-[#d97706]"
+              value={year}
+              onChange={handleChange}
+              sx={{
+                my: 4,
+                borderRadius: '50px',
+                fontSize: '1.2em',
+              }}
+            >
+              <MenuItem value={2018}>2018</MenuItem>
+              <MenuItem value={2019}>2019</MenuItem>
+              <MenuItem value={2020}>2020</MenuItem>
+              <MenuItem value={2021}>2021</MenuItem>
+              <MenuItem value={2022}>2022</MenuItem>
+              <MenuItem value={2023}>2023</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+        <EventCard title="ML Marvel" body="you know what, sometimes I wonder if niggaswanna see em fall bro. I wonder if this work yar lol but seriously though what is niggas wanna see me fall?" />
+
+        {/* <div className={styles.carousel}>
+          <div className={`${styles["slideshow-container"]}`}>
+            <div className={styles.slide}>
+              <div className={styles.numbertext}>
+                {slideIndex} / {slides.length}
+              </div>
+              <img src={slides[slideIndex + 0]} />
+              <div className={styles.text}>Caption Text</div>
+            </div>
+
+            <a className={styles.prev} onClick={prevSlide}>
+              {"<"}
+            </a>
+            <a className={styles.next} onClick={nextSlide}>
+              {">"}
+            </a>
+          </div>
+
+          {/* <div className={`${styles["nav"]} text-center`}>
           <span className={styles.dot} onClick={() => {}}></span>
           <span className={styles.dot} onClick={() => {}}></span>
           <span className={styles.dot} onClick={() => {}}></span>
+        </div>
         </div> */}
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
+
+        // <EventCard title="ML Marvel" body="you know what, sometimes I wonder if niggaswanna see em fall bro. I wonder if this work yar lol but seriously though what is niggas wanna see me fall?"></EventCard>
