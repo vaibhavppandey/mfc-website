@@ -1,71 +1,69 @@
 .events {
-    background-color: #222;
-    color: #fff;
-    height: 100vh;
-    overflow: hidden;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
+  background-color: #222;
+  color: #fff;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  margin-bottom: 12px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.events .heading,
+.events .heading {
+  background: radial-gradient(circle, #f6842a, #af7af2);
+  -webkit-background-clip: text;
+  font-family: "Montserrat", sans-serif;
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+
 .events .about,
 .events .year_select {
-    text-align: center;
-    margin-top: 12px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-top: 12px;
 }
 
 .events .carousel {
-    /* background-color: yellow; */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    max-width: 80vw;
-    margin: auto;
-    margin-top: 12px;
-    position: relative;
-}
-
-.events .carousel .slide_count {
-    /* background-color: #ccc; */
-    text-align: center;
-}
-
-.events .carousel .content .next_slide,
-.events .carousel .content .prev_slide {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 8px;
-    position: relative;
-    /* transform: translateY(-50%); */
-    top: 50%;
+  max-width: 40vw;
+  margin: ;
+  margin-bottom: 12px;
+  padding: 1rem;
+  position: relative;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #f9a826, #fcc8d2 100%);
 }
 
 .events .carousel .content {
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    padding: 8px 0 8px 0;
-}
-
-.events .carousel .content .col_1,
-.events .carousel .content .col_2 {
-    flex-basis: 50%;
+  /* background-color: red; */
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0 8px 0;
 }
 
 .events .carousel .content .col_1 {
-    object-fit: contain;
-    height: 50vh;
-    width: 50%;
+  object-fit: contain;
+  height: auto;
+  width: 45%;
 }
 
 .events .carousel .content .col_2 {
-    /* background-color: green; */
-    text-align: center;
+  /* background-color: green; */
+  text-align: center;
 }
 
 .events .carousel .register {
-    background-color: #f9a826;
-    color: #000;
-    position: absolute;
-    right: 0;
-    margin-top: 6px;
+  background-color: #f9a826;
+  color: #000;
+  position: absolute;
+  right: 0;
+  margin-top: 6px;
+}
+
+.evets .carousel .navigation {
+  justify-content: center;
+  height: 1rem;
 }
