@@ -11,6 +11,23 @@ export const Event = () => {
 
   const [year, setYear] = useState("2023");
   const [slideIndex, setSlideIndex] = useState(0);
+  const slideContent = [
+    {
+      heading: "Event One",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpa asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
+    },
+    {
+      heading: "Event Two",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpa asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
+    },
+    {
+      heading: "Event Three",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpa asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
+    },
+  ];
 
   const indicatorLIs = slides.map((_, index) => (
     <img
@@ -108,13 +125,8 @@ export const Event = () => {
           ></div>
 
           <div className={`${styles.col_2} text-center w-1/2`}>
-            <h2 className="my-2">Event Name</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-              ipsa, quae molestiae maxime culpa unde aliquam velit, dolore dicta
-              cupiditate odio. Accusantium nihil quam aliquam reprehenderit
-              officia iusto ducimus nesciunt.
-            </p>
+            <h2 className="my-2">{slideContent[slideIndex].heading}</h2>
+            <p>{slideContent[slideIndex].description}</p>
           </div>
         </div>
       </div>
