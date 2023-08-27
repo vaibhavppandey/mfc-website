@@ -5,7 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import OnePage from "./pages/OnePage";
-import React ,{ useEffect } from "react";
+import React, { useEffect } from "react";
 import { EventsPage } from "./pages/EventsPage";
 
 function App() {

@@ -1,4 +1,4 @@
-import { Button, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Button, FormControl, MenuItem, Select } from "@mui/material";
 import React, { useState } from "react";
 import styles from "./event.module.css";
 
@@ -11,6 +11,15 @@ export const Event = () => {
 
   const [year, setYear] = useState("2023");
   const [slideIndex, setSlideIndex] = useState(0);
+
+  const indicatorLIs = slides.map((_, index) => (
+    <img
+      src={
+        index === slideIndex ? "dot-indictaor--1.svg" : "dot-indictaor--2.svg"
+      }
+      alt="Slide Indicator"
+    />
+  ));
 
   const nextSlide = () => {
     if (slideIndex === slides.length - 1) setSlideIndex(0);
@@ -28,7 +37,8 @@ export const Event = () => {
 
   return (
     <div className={styles.events}>
-      <h1 className={styles.heading}>Events</h1>
+      <div className="mt-16"></div>
+      <h1 className={styles.heading}>Events at MFC VIT</h1>
 
       <div className={styles.about}>
         <p>
@@ -39,14 +49,17 @@ export const Event = () => {
       </div>
 
       <div className={styles.year_select}>
-        <FormControl>
-          <InputLabel id="year-select-label">Year</InputLabel>
+        <FormControl sx={{ width: "250px" }}>
           <Select
-            className="bg-orange"
-            labelId="year-select-label"
-            id="year-select"
+            className="bg-[#ff6a00] font-montserrat"
             value={year}
             onChange={handleChange}
+            sx={{
+              my: 4,
+              borderRadius: "50px",
+              fontFamily: '"Montserrat", sans-serif',
+              fontSize: "1.2em",
+            }}
           >
             <MenuItem value={2018}>2018</MenuItem>
             <MenuItem value={2019}>2019</MenuItem>
@@ -59,21 +72,31 @@ export const Event = () => {
       </div>
 
       <div className={styles.carousel}>
-        <p className={styles.slide_count}>{slideIndex + 1} / {slides.length}</p>
+        {/* <p className={styles.slide_count}>{slideIndex + 1} / {slides.length}</p> */}
         <div className={styles.content}>
-          <p className={styles.prev_slide} onClick={prevSlide}>
-            {"<"}
-          </p>
           <img className={styles.col_1} src={slides[slideIndex + 0]} />
+          <div class="box-border w-[0.04rem] h-[16rem] border-r-[0.7px] border-solid border-saddlebrown mx-2"></div>
+          {/* <div class="box-border h-full w-[1px] border-r-[1px] border-solid border-black mx-[1px]"></div> */}
           <div className={styles.col_2}>
-            <h1>Event Name</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa, quae molestiae maxime culpa unde aliquam velit, dolore dicta cupiditate odio. Accusantium nihil quam aliquam reprehenderit officia iusto ducimus nesciunt.</p>
+            <h1 className="text-black">Event Name</h1>
+            <p className="text-black">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              ipsa, quae molestiae maxime culpa unde aliquam velit, dolore dicta
+              cupiditate odio. Accusantium nihil quam aliquam reprehenderit
+              officia iusto ducimus nesciunt.
+            </p>
           </div>
-          <p className={styles.next_slide} onClick={nextSlide}>
-            {">"}
-          </p>
         </div>
-        <Button className={styles.register}>Register for Event</Button>
+        {/* <Button className={styles.register}>Register for Event</Button> */}
+      </div>
+      <div className="flex w-full justify-center h-8">
+        <div className="flex justify-between items-center w-1/4">
+          <img src="arrow-left.svg" onClick={prevSlide} />
+          <div className="flex flex-row justify-between w-1/4 ">
+            {indicatorLIs}
+          </div>
+          <img src="arrow-right.svg" onClick={nextSlide} />
+        </div>
       </div>
     </div>
   );
