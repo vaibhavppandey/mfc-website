@@ -24,8 +24,8 @@ module.exports = {
         gainsboro: "#e6e6e6",
       },
       fontFamily: {
-        montserrat: "Montserrat",
-        raleway: "Raleway",
+        "montserrat": "Montserrat",
+        "raleway": "Raleway",
         "abril-fatface": "'Abril Fatface'",
         "abhaya-libre-semibold": "'Abhaya Libre SemiBold'",
       },

@@ -1,90 +1,10 @@
-.events {
-  background-color: #222;
-  color: #fff;
-  height: 100%;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px;
-  line-height: 1.6;
-}
-
-.events .heading,
-.events .about,
-.events .year_select {
-  text-align: center;
-}
-
-.events .heading,
-.events .about {
-  margin-top: 12px;
-}
-
-.events .about,
-.events .year_select {
-  font-family: "Raleway", sans-serif;
-}
-
-.events .heading {
-  background: radial-gradient(circle, #f6842a, #af7af2);
-  -webkit-background-clip: text;
-  font-family: "Montserrat", sans-serif;
-  background-clip: text;
-  color: transparent;
-  font-size: 3rem;
-}
-
-.events .about {
-  max-width: 60%;
-}
-
-.events .carousel {
-  max-width: 60vw;
-  margin: 12px 0;
-  padding: 1rem;
-  position: relative;
-  border-radius: 36px;
-  background: linear-gradient(180deg, #f9a826, #fcc8d2 100%);
-}
-
-.events .carousel .content {
-  font-family: "Raleway", sans-serif;
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
-}
-
-.events .carousel .content .col_1 {
-  object-fit: contain;
-  height: auto;
-  width: 45%;
-}
-
-.events .carousel .content .box_border {
-  width: 0.04rem;
-  height: 16rem;
-  border-right: 0.7px solid saddlebrown;
-  margin: 0 2px;
-  padding: 2px;
-}
-
-.events .carousel .content .col_2 {
-  text-align: center;
-}
-
-.evets .carousel .navigation {
-  justify-content: center;
-  height: 1rem;
-}
-
 @media (max-width: 720px) {
   .events .about {
-    max-width: 80%;
+    width: 80%;
   }
 
   .events .carousel {
-    max-width: 80vw;
+    width: 80vw;
   }
 
   .events .carousel .content {
@@ -102,5 +22,6 @@
     width: 100%;
     border: none;
     border-bottom: 0.8px solid saddlebrown;
+    margin: 4px;
   }
 }
