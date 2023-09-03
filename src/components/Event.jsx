@@ -15,17 +15,17 @@ export const Event = () => {
     {
       heading: "Event One",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpa asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpal asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
     },
     {
       heading: "Event Two",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpa asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpal asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
     },
     {
       heading: "Event Three",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpa asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorum tempore consequuntur culpal asperiores error non eligendi nesciunt cum, quasi earum, harum porro enim. Ea exercitationem beatae corporis nostrum sint.",
     },
   ];
 
